@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7d388d40016bb7037551be363dc1582694a96b8c111edb1dc89349e311d22b0b
-size 229
+from flask import Flask
+import os
+import prediction
+
+app = Flask(__name__)
+
+@app.route('/')
+def predict():
+    return prediction.getPredictionResult()
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=8014, debug=True)
