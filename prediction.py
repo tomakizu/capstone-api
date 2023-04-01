@@ -1,6 +1,7 @@
 import math
 import numpy as np
 import torch
+import json
 
 from datetime import datetime
 from argparse import ArgumentParser
@@ -85,7 +86,7 @@ def getPredictionResult(dataset='pems', timestamp='2017-01-01 00:00:00'):
 
     # Prediction
     prediction, label = predict(model, validateX, validateY, mean, std)
-    return np.array2string(prediction[0][0])
+    return json.dumps({'prediction': np.array2string(prediction[0][0]), 'actual' : np.array2string(label[0][0])})
 
 # # process and validate dataset
 # dataset = args.network.lower()
