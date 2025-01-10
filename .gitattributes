@@ -1,0 +1,6 @@
+data/PEMS_BAY.npy filter=lfs diff=lfs merge=lfs -text
+data/PEMS_BAY.npz filter=lfs diff=lfs merge=lfs -text
+data/METR_LA filter=lfs diff=lfs merge=lfs -text
+data/METR_LA.npy filter=lfs diff=lfs merge=lfs -text
+data/METR_LA.npz filter=lfs diff=lfs merge=lfs -text
+data/PEMS_BAY filter=lfs diff=lfs merge=lfs -text
